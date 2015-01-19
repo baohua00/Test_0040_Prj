@@ -18,12 +18,10 @@ public class DetailsFragment extends Fragment {
      */
     public static DetailsFragment newInstance(int index) {
         DetailsFragment f = new DetailsFragment();
-
         // Supply index input as an argument.
         Bundle args = new Bundle();
         args.putInt("index", index);
         f.setArguments(args);
-
         return f;
     }
 
@@ -47,8 +45,13 @@ public class DetailsFragment extends Fragment {
 
         ScrollView scroller = new ScrollView(getActivity());
         TextView text = new TextView(getActivity());
-        int padding = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                4, getActivity().getResources().getDisplayMetrics());
+        
+        int padding = (int)TypedValue.applyDimension(
+        		TypedValue.COMPLEX_UNIT_DIP,
+                4, 
+                getActivity().getResources().getDisplayMetrics()
+                );
+        
         text.setPadding(padding, padding, padding, padding);
         scroller.addView(text);
         text.setText(Resource.DIALOGUE[getShownIndex()]);
