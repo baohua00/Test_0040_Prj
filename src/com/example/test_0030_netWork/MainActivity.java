@@ -13,6 +13,7 @@ public class MainActivity extends Activity {
 	private Button button ;
 	private Button buttonHttp ;
 	private Button buttonFragmrnt ;
+	private Button buttonFragmrntAutoMatch ;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +42,24 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-        buttonFragmrnt = (Button) findViewById(R.id.fragment);
+        buttonFragmrnt = (Button) findViewById(R.id.Fragment);
 		buttonFragmrnt.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
 				intent.setClass(MainActivity.this, FragmentActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		buttonFragmrntAutoMatch = (Button) findViewById(R.id.FragmentAutoMatch);
+		buttonFragmrntAutoMatch.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(MainActivity.this, FragmentAutoMatchActivity.class);
 				startActivity(intent);
 			}
 		});

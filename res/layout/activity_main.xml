@@ -24,10 +24,17 @@
         />
     
     <Button 
-        android:id="@+id/fragment" 
+        android:id="@+id/Fragment" 
         android:layout_width="match_parent"
     	android:layout_height="wrap_content"
     	android:text="FRAGMENT"
+        />
+    
+    <Button 
+        android:id="@+id/FragmentAutoMatch" 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="FragmentAutoMatch"
         />
     
 </LinearLayout>

@@ -54,11 +54,11 @@ public class MenuFragment extends Fragment implements OnItemClickListener {
     public void onActivityCreated(Bundle savedInstanceState) {  
         super.onActivityCreated(savedInstanceState);  
         if (getActivity().findViewById(R.id.details_layout) != null) {  
-            isTwoPane = true;  
-        } else {  
-            isTwoPane = false;  
+            isTwoPane = true;
+        } else {
+            isTwoPane = false;
         }  
-    }  
+    }
        
     //处理ListView的点击事件，会根据当前是否是双页模式进行判断。如果是双页模式，则会动态添加Fragment。 
     //如果不是双页模式，则会打开新的Activity。 

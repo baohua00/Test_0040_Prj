@@ -57,7 +57,7 @@ public class TitleFragment extends ListFragment {
                 ft.replace(R.id.details, df);  
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 //                ft.addToBackStack(null);
-                ft.commit();  
+                ft.commit();
                 mShownCheckPosition = index;  
             }     
     }

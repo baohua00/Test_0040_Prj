@@ -27,6 +27,12 @@
         </activity>
         <activity android:name=".FragmentActivity">
         </activity>
+        <activity android:name=".FragmentAutoMatchActivity">
+        </activity>
+        <activity android:name=".DisplayActivity">
+        </activity>
+        <activity android:name=".SoundActivity">
+        </activity>
     </application>
     <uses-permission 
         android:name="android.permission.INTERNET"
