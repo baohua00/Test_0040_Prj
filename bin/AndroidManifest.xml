@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.test_0030_netWork"
+    package="com.example.test_0040_Prj"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,25 +14,23 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.test_0030_netWork.MainActivity"
+            android:name="com.example.test_0040_Prj.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NetPicActivity">
+        <activity android:name="com.example.test_0040_Prj.SignActivity">
         </activity>
-        <activity android:name=".HttpRequestActivity">
-        </activity>
-        <activity android:name=".FragmentActivity">
-        </activity>
-        <activity android:name=".FragmentAutoMatchActivity">
-        </activity>
-        <activity android:name=".DisplayActivity">
-        </activity>
-        <activity android:name=".SoundActivity">
-        </activity>
+        <service android:name=".UpdateTimeService"></service>
+        <receiver android:name="ExampleAppWidgetProvider" >
+		    <intent-filter>
+		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		    </intent-filter>
+		    <meta-data android:name="android.appwidget.provider"
+		               android:resource="@xml/example_appwidget_info" />
+		</receiver>
     </application>
     <uses-permission 
         android:name="android.permission.INTERNET"
